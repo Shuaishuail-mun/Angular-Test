@@ -1,0 +1,10 @@
+<div>
+  <button
+    *ngFor="let option of options"
+    [style.background-color]="(displayData.hasOwnProperty(option)) ?
+    'rgba(000,255,000,' +displayData[option]/100 +  ')'
+      : 'rgba(255,255,255,0.31)'"
+  >
+  {{option}}
+  </button>
+</div>
