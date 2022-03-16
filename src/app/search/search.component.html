@@ -9,4 +9,9 @@
           (click)="startSearch()">
     Search
   </button>
+  <p  *ngIf="showNoResult">
+    <ngb-alert type="warning" (closed)="closeAlert()">
+      No Data for this IP address!
+    </ngb-alert>
+  </p>
 </div>
