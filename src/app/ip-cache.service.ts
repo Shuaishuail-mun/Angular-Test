@@ -17,6 +17,8 @@ export class IpCacheService {
     }
     const cacheForUrl = filterResult[0];
     if(new Date() > cacheForUrl.expires) {
+      // remove the expired cache
+      this.cache = this.cache.filter((cache, index) => cache.url !== url);
       return null;
     }
     return cacheForUrl.value;
